@@ -1,0 +1,132 @@
+{
+	"geode": "4.0.0",
+	"gd": {
+		"win": "*",
+		"android": "*",
+		"mac": "*",
+		"ios": "*"
+	},
+	"id": "fakegdcube.hackpack",
+	"name": "Hack Pack",
+	"version": "v1.1.0",
+	"developer": "FakeGdCube",
+	"description": "A Mega Hack style toolkit: noclip, speedhack, FPS/TPS bypass, hitboxes, bot, music tools and more.",
+	"settings": {
+		"auto-safe": {
+			"type": "bool",
+			"name": "Auto Safe Mode",
+			"description": "Automatically stops progress/completions from being saved while any cheat is active. Recommended.",
+			"default": true
+		},
+		"noclip": {
+			"type": "bool",
+			"name": "Noclip",
+			"description": "Don't die from hazards and blocks.",
+			"default": false
+		},
+		"noclip-limit-on": {
+			"type": "bool",
+			"name": "Noclip death limit",
+			"description": "Sub-option of Noclip: you die after hitting too many separate obstacles.",
+			"default": false
+		},
+		"noclip-limit": {
+			"type": "int",
+			"name": "Noclip death limit amount",
+			"description": "How many separate hits are allowed before you die (needs Noclip + death limit on).",
+			"default": 10,
+			"min": 1,
+			"max": 1000,
+			"control": { "input": true }
+		},
+		"speed-on": {
+			"type": "bool",
+			"name": "Speedhack",
+			"default": false
+		},
+		"speed": {
+			"type": "float",
+			"name": "Speed multiplier",
+			"default": 1.0,
+			"min": 0.1,
+			"max": 5.0,
+			"control": { "slider": true }
+		},
+		"fps-on": {
+			"type": "bool",
+			"name": "FPS bypass",
+			"default": false
+		},
+		"fps": {
+			"type": "int",
+			"name": "FPS target",
+			"default": 60,
+			"min": 10,
+			"max": 1000,
+			"control": { "input": true }
+		},
+		"tps-on": {
+			"type": "bool",
+			"name": "TPS bypass",
+			"description": "Changes physics ticks per second (default 240). Macros only replay correctly at the TPS they were recorded at.",
+			"default": false
+		},
+		"tps": {
+			"type": "int",
+			"name": "TPS target",
+			"default": 240,
+			"min": 30,
+			"max": 2000,
+			"control": { "input": true }
+		},
+		"hitboxes": {
+			"type": "bool",
+			"name": "Show hitboxes",
+			"default": false
+		},
+		"reverb": {
+			"type": "bool",
+			"name": "Music reverb",
+			"description": "Adds a reverb effect to the level music.",
+			"default": false
+		},
+		"practice-music": {
+			"type": "bool",
+			"name": "Practice music hack",
+			"description": "Syncs the music to your checkpoint when you respawn in practice mode.",
+			"default": false
+		},
+		"rainbow": {
+			"type": "bool",
+			"name": "Rainbow icons",
+			"default": false
+		},
+		"rainbow-speed": {
+			"type": "float",
+			"name": "Rainbow speed",
+			"default": 0.5,
+			"min": 0.1,
+			"max": 3.0,
+			"control": { "slider": true }
+		},
+		"jump-hack": {
+			"type": "bool",
+			"name": "Jump hack (experimental)",
+			"description": "Jump anywhere, even in the air.",
+			"default": false
+		},
+		"auto-complete": {
+			"type": "bool",
+			"name": "Auto complete",
+			"description": "Instantly completes the level. Progress is never saved when this is on.",
+			"default": false
+		},
+		"bot-mode": {
+			"type": "string",
+			"name": "Bot mode",
+			"description": "Record your inputs, then Replay them. One macro is saved per level.",
+			"default": "Off",
+			"one-of": ["Off", "Record", "Replay"]
+		}
+	}
+}
