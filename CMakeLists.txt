@@ -10,7 +10,8 @@ file(GLOB SOURCES
 	src/*.cpp
 )
 
-add_library(${PROJECT_NAME} SHARED ${SOURCES})
+add_library(${PROJECT_NAME} SHARED
+    main.cpp
 
 if (NOT DEFINED ENV{GEODE_SDK})
 	message(FATAL_ERROR "Unable to find Geode SDK! Set the GEODE_SDK environment variable.")
